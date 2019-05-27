@@ -12,10 +12,13 @@ RUN apt-get update \
         curl \
         wget \
         tcptraceroute \
+        g++ \
+        unixodbc-dev \
     && pip install --upgrade pip \
     && pip install subprocess32 \
     && pip install gunicorn \ 
     && pip install virtualenv \
+    && pip install pyodbc \
     && pip install flask 
 
 WORKDIR ${HOME_SITE}
